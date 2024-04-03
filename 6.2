@@ -1,0 +1,10 @@
+def fun(x):
+    for key in dict1:
+        if x in key:
+            return dict1.get(key)
+ 
+dict1 = {
+    'АВЕИНОРСТ' : 1, 'ДКЛМПУ' : 2, 'БГЁЬЯ' : 3,
+    'ЙЫ' : 4, 'ЖЗХЦЧ' : 5, 'ШЭЮ' : 8, 'ФЩЪ' :10
+    }
+print(sum(map(fun, input())))
