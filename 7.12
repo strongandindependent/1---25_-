@@ -1,0 +1,19 @@
+from PIL import Image
+
+image = Image.open('rabbit.jpg')
+
+image.show()
+
+image_resized = image.resize(
+    (image.width // 3, image.height // 3)
+)
+image_resized.show()
+image_resized.save("rabbit_resized.jpg")
+
+gor_image = image.transpose(Image.Transpose.FLIP_TOP_BOTTOM)
+gor_image.show()
+gor_image.save("rabbit_gor.jpg")
+
+ver_image = image.transpose(Image.Transpose.FLIP_LEFT_RIGHT)
+ver_image.show()
+ver_image.save("rabbit_ver.jpg")
