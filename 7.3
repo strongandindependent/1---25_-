@@ -1,0 +1,10 @@
+from PIL import Image, ImageFilter
+
+image = Image.open('1.jpg')
+
+
+def filter_photo(input_image_path):
+    input_image_path = input_image_path.filter(ImageFilter.CONTOUR)
+
+
+filter_photo(image)
